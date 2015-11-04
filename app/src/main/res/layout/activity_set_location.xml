@@ -36,7 +36,7 @@
                 android:layout_column="0" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/chkDefLoc"
                 android:layout_column="14"
                 android:layout_row="0" />
         </GridLayout>
@@ -44,8 +44,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Location"
-            android:id="@+id/editText" />
+            android:hint="@string/hintLocation"
+            android:id="@+id/edTxtLocation" />
 
         <Button
             android:layout_width="wrap_content"
