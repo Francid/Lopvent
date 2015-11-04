@@ -6,6 +6,8 @@ import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -33,6 +35,8 @@ public class SetLocation extends Activity
     private static final String TAG = SetLocation.class.getSimpleName();
     private GoogleApiClient mGoogleApiClient;
     private Location userLocation;
+    private static EditText edTxtLocation;
+    private static Intent intent;
 
 
     @Override
@@ -40,6 +44,7 @@ public class SetLocation extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_location);
 
+        edTxtLocation=(EditText)findViewById(R.id.edTxtLocation);
         /*Call the buildApiClient only if service is available*/
         if (checkDevicePlayService()){
 
@@ -134,11 +139,11 @@ public class SetLocation extends Activity
 
         final CheckBox uChkDefLoc = (CheckBox) findViewById(R.id.chkDefLoc);
 
-        uChkDefLoc.setOnClickListener(new OnClickListener(){
+        uChkDefLoc.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(uChkDefLoc.isChecked()){
+                if (uChkDefLoc.isChecked()) {
                     displayUserLocation();
                 }
             }
@@ -180,5 +185,16 @@ public class SetLocation extends Activity
         Toast.makeText(this, "Connection Failed", Toast.LENGTH_LONG).show();
         Log.i(TAG, "Connection failed: ConnectionResult.getErrorCode() = "
                 + connectionResult.getErrorCode());
+    }
+
+    public void gotoNavigationPane(View view) {
+        SharedPreferences myPreference = getSharedPreferences("CustomSharedPreferencesLocation", 0);
+        SharedPreferences.Editor prefEditor = myPreference.edit();
+        prefEditor.putString("KeyLocation", edTxtLocation.getText().toString());
+        prefEditor.commit();
+        intent = new Intent(this, HomeActivityMenu.class);
+        startActivity(intent);
+
+
     }
 }

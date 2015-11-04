@@ -17,7 +17,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".HomeActivity" >
+        <activity android:name=".LogoActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,6 +37,10 @@
         </activity>
         <activity android:name=".SetLocation" >
         </activity>
+        <activity android:name=".HomeActivityMenu"></activity>
+        <activity android:name=".Search"></activity>
+        <activity android:name=".Setting"></activity>
+        <activity android:name=".NavigationPane"></activity>
     </application>
 
 </manifest>
