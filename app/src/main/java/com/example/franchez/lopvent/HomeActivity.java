@@ -17,5 +17,7 @@ public class HomeActivity extends Activity {
     public void gotoSetLocation(View view) {
         Intent gotoSetLocationIntent=new Intent(this,SetLocation.class);
         startActivity(gotoSetLocationIntent);
+        Intent intent =new Intent(this,SetLocation.class);
+      //  startActivity(intent);
     }
 }
