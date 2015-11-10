@@ -192,7 +192,7 @@ public class SetLocation extends Activity
         SharedPreferences.Editor prefEditor = myPreference.edit();
         prefEditor.putString("KeyLocation", edTxtLocation.getText().toString());
         prefEditor.commit();
-        intent = new Intent(this, HomeActivityMenu.class);
+        intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
 
 
