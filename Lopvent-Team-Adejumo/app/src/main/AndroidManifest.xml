@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.franchez.lopvent" >
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <permission android:name="com.example.franchez" android:protectionLevel="signature"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".SetLocation" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".DetailView" >
+        </activity>
+        <activity android:name=".EventCategories" >
+        </activity>
+        <activity android:name=".EventList" >
+        </activity>
+        <activity android:name=".PlacesList" >
+        </activity>
+        <activity android:name=".SavedList" >
+        </activity>
+        <activity android:name=".LogoActivity" >
+        </activity>
+        <activity android:name=".HomeActivityMenu"></activity>
+        <activity android:name=".Search"></activity>
+        <activity android:name=".Setting"></activity>
+        <activity android:name=".NavigationPane"></activity>
+    </application>
+
+</manifest>
