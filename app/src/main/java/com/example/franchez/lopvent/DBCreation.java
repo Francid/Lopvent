@@ -18,12 +18,37 @@ public class DBCreation extends SQLiteOpenHelper {
     private static final String EVENT_TABLE = "eventTable";
     private static final String PLACES_TABLE = "placesTable";
 
-    //Create CategoryTable statments
-    private static final String CREATE_TABLE_CATEGORY = "CREATE TABLE" + CATEGORY_TABLE
-            + "("
+    //Create categoryTable statments
+    private static final String CREATE_TABLE_CATEGORY = "CREATE TABLE " + CATEGORY_TABLE
+            + "( "
             + "CategoryID INTEGER PRIMARY KEY"
-            + "CategoryName"
-            + ")";
+            + "CategoryName VARCHAR(50)"
+            + " );";
+
+    //Create eventTable statement
+    private static final String CREATE_TABLE_EVENT = "CREATE TABLE " + EVENT_TABLE
+            + "( "
+            + "EventID      INTEGERY PRIMARY KEY"
+            + "EventName    VARCHAR(50)"
+            + "EventLocation VARCHAR(50)"
+            + "EventDate    TEXT"
+            + "EventTime    TEXT"
+            + "EventEndDate TEXT"
+            + "EventDescription TEXT"
+            + "EventRating  NUMERIC"
+            + "CategoryID   INTEGER"
+            + "FOREIGN KEY(CategoryID) REFERENCES " + CATEGORY_TABLE + "(CategoryID)"
+            + " );";
+
+    //Create placesTable statement
+    private static final String CREATE_TABLE_PLACES = "CREATE TABLE " + PLACES_TABLE
+            +"( "
+            + "PlaceID      INTEGER PRIMARY KEY"
+            + "PLaceName    VARCHAR(50)"
+            + "PlaceLocation VARCHAR(50)"
+            + "PlaceDescription TEXT"
+            + "PlaceRating  NUMERIC"
+            +" );";
 
     public DBCreation(Context context){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -32,6 +57,8 @@ public class DBCreation extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(CREATE_TABLE_CATEGORY);
+        db.execSQL(CREATE_TABLE_EVENT);
+        db.execSQL(CREATE_TABLE_PLACES);
     }
 
     @Override
