@@ -35,12 +35,8 @@
         </activity>
         <activity android:name=".SavedList" >
         </activity>
-        <activity android:name=".LogoActivity" >
+        <activity android:name=".HomeActivity" >
         </activity>
-        <activity android:name=".HomeActivityMenu"></activity>
-        <activity android:name=".Search"></activity>
-        <activity android:name=".Setting"></activity>
-        <activity android:name=".NavigationPane"></activity>
     </application>
 
 </manifest>

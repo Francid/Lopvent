@@ -244,7 +244,7 @@ public class SetLocation extends AppCompatActivity
     //Start the next Activity by method overloading
     public void gotoNavigationPane() {
 
-        intent = new Intent(this, EventList.class);
+        intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
         SetLocation.this.finish();
     }
