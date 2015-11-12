@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:onClick="gotoSetLocation"
         android:src="@drawable/logo"
+
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />

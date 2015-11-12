@@ -230,8 +230,11 @@ public class SetLocation extends AppCompatActivity
     }
 
 
-    //Please comment what is happening here
-    public void gotoNavigationPane(View view) {
+    //Author @ avneet
+    //changed the name form gotoNavigationOane to gotoHomePage
+    //it saves the user location in shared preferences variable which can be use anywhere in the whole application
+    //it also navigate to home Activity page
+    public void gotoHomePage(View view) {
         SharedPreferences myPreference = getSharedPreferences("CustomSharedPreferencesLocation", 0);
         SharedPreferences.Editor prefEditor = myPreference.edit();
         prefEditor.putString("KeyLocation", edTxtLocation.getText().toString());
@@ -242,6 +245,7 @@ public class SetLocation extends AppCompatActivity
     }
 
     //Start the next Activity by method overloading
+    //TBD  @ Avneet
     public void gotoNavigationPane() {
 
         intent = new Intent(this, EventList.class);
