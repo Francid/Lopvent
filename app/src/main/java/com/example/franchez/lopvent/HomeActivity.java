@@ -18,10 +18,8 @@ import java.util.TreeMap;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Inflate the menu; this adds items to the action bar if it is present.
-
-
-    }
+        setContentView(R.layout.activity_home);
+  }
 
 
 

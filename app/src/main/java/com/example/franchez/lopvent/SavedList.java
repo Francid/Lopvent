@@ -20,19 +20,14 @@ import android.widget.TextView;
 
 public class SavedList extends AppCompatActivity implements ActionBar.TabListener {
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
+
+
     SectionsPagerAdapter mSectionsPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
      */
+
     ViewPager mViewPager;
 
     @Override
@@ -49,7 +44,7 @@ public class SavedList extends AppCompatActivity implements ActionBar.TabListene
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.pager);
+       // mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         // When swiping between different sections, select the corresponding
@@ -141,9 +136,9 @@ public class SavedList extends AppCompatActivity implements ActionBar.TabListene
             Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                //    return getString(R.string.title_section1).toUpperCase(l);
+                    return getString(R.string.title_section1).toUpperCase(l);
                 case 1:
-                //    return getString(R.string.title_section2).toUpperCase(l);
+                    return getString(R.string.title_section2).toUpperCase(l);
 
             }
             return null;
@@ -182,5 +177,6 @@ public class SavedList extends AppCompatActivity implements ActionBar.TabListene
             return rootView;
         }
     }
+
 
 }

@@ -8,6 +8,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.design.internal.NavigationMenu;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -231,11 +232,9 @@ public class SetLocation extends AppCompatActivity
 
 
     //Please comment what is happening here
-    public void gotoNavigationPane(View view) {
-        SharedPreferences myPreference = getSharedPreferences("CustomSharedPreferencesLocation", 0);
-        SharedPreferences.Editor prefEditor = myPreference.edit();
-        prefEditor.putString("KeyLocation", edTxtLocation.getText().toString());
-        prefEditor.commit();
+    //removed the shared preferences
+    public void gotoHomeActivity(View view) {
+
         intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
         SetLocation.this.finish();
@@ -244,7 +243,7 @@ public class SetLocation extends AppCompatActivity
     //Start the next Activity by method overloading
     public void gotoNavigationPane() {
 
-        intent = new Intent(this, HomeActivity.class);
+        intent = new Intent(this, NavigationMenu.class);
         startActivity(intent);
         SetLocation.this.finish();
     }
