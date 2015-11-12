@@ -14,7 +14,7 @@ import android.widget.Spinner;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-abstract class HomeActivity extends Activity {
+ public class HomeActivity extends Activity {
 
 
     @Override
