@@ -35,11 +35,13 @@
         </activity>
         <activity android:name=".SavedList" >
         </activity>
-        <activity android:name=".LogoActivity" >
+        <activity android:name=".Nearby_View" >
+        </activity>
+        <activity android:name=".Popular_View">
+        </activity>
+        <activity android:name=".All_View">
         </activity>
         <activity android:name=".HomeActivityMenu"></activity>
-        <activity android:name=".Search"></activity>
-        <activity android:name=".Setting"></activity>
         <activity android:name=".NavigationPane"></activity>
     </application>
 

@@ -64,7 +64,7 @@ public class SetLocation extends AppCompatActivity
 
             setActivityPreference(this);            //Create a sharedPreference for this activity
 
-            // myDatabase = new DBCreation(this);      //Intiallize the DBCreation Object
+            //myDatabase = new DBCreation(this);      //Intiallize the DBCreation Object
 
         } else {
 
@@ -232,11 +232,11 @@ public class SetLocation extends AppCompatActivity
 
     //Please comment what is happening here
     public void gotoNavigationPane(View view) {
-        SharedPreferences myPreference = getSharedPreferences("CustomSharedPreferencesLocation", 0);
+        /*SharedPreferences myPreference = getSharedPreferences("CustomSharedPreferencesLocation", 0);
         SharedPreferences.Editor prefEditor = myPreference.edit();
         prefEditor.putString("KeyLocation", edTxtLocation.getText().toString());
-        prefEditor.commit();
-        intent = new Intent(this, HomeActivity.class);
+        prefEditor.commit();*/
+        intent = new Intent(this, EventList.class);
         startActivity(intent);
         SetLocation.this.finish();
     }
