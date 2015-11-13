@@ -64,12 +64,12 @@ public class SetLocation extends AppCompatActivity
 
             setActivityPreference(this);            //Create a sharedPreference for this activity
 
-            //myDatabase = new DBCreation(this);      //Intiallize the DBCreation Object
+           // myDatabase = new DBCreation(this);      //Intiallize the DBCreation Object
 
         } else {
 
-           // gotoNavigationPane();
-            gotoHomeActivity();//@ avneet replaced Event List with  Home Activity
+            gotoNavigatsionPane();
+
         }
 
     }
@@ -232,41 +232,25 @@ public class SetLocation extends AppCompatActivity
 
 
     //Please comment what is happening here
-    public void gotoNavigationPane(View view) {
+    public void gotoNavigatsionPane(View view) {
 
-      /*
-        intent = new Intent(this, EventList.class);
+        intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
         SetLocation.this.finish();
-        */
+
     }
 
     //Start the next Activity by method overloading
     //@avneet : go to navigation page
     public void gotoNavigatsionPane() {
-        Intent intent = new Intent(this, navigation.class);
-        startActivity(intent);
-        /*
-        intent = new Intent(this, EventList.class);
+
+        intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
         SetLocation.this.finish();
-    }*/
+
     }
 
-    //@ Avneet
-    //open ups the Home Page
-    public void gotoHomeActivity() {
-        intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
-        SetLocation.this.finish();
-    }
-    //@ Avneet
-    //open ups the Home Page
-    public void gotoHomeActivity(View view) {
-        intent = new Intent(this, HomeActivity.class);
-        startActivity(intent);
-        SetLocation.this.finish();
-    }
+
 
 
 }
