@@ -51,7 +51,7 @@
             android:layout_gravity="right"
             android:layout_marginTop="40dp"
             android:text="@string/btNext"
-            android:onClick="gotoNavigationPane"
+            android:onClick="gotoHomeActivity"
             android:id="@+id/button" />
     </LinearLayout>
 
