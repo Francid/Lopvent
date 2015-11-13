@@ -8,7 +8,6 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
-import android.support.design.internal.NavigationMenu;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -65,7 +64,7 @@ public class SetLocation extends AppCompatActivity
 
             setActivityPreference(this);            //Create a sharedPreference for this activity
 
-            // myDatabase = new DBCreation(this);      //Intiallize the DBCreation Object
+            //myDatabase = new DBCreation(this);      //Intiallize the DBCreation Object
 
         } else {
 
@@ -232,10 +231,12 @@ public class SetLocation extends AppCompatActivity
 
 
     //Please comment what is happening here
-    //removed the shared preferences
-    public void gotoHomeActivity(View view) {
-
-        intent = new Intent(this, HomeActivity.class);
+    public void gotoNavigationPane(View view) {
+        /*SharedPreferences myPreference = getSharedPreferences("CustomSharedPreferencesLocation", 0);
+        SharedPreferences.Editor prefEditor = myPreference.edit();
+        prefEditor.putString("KeyLocation", edTxtLocation.getText().toString());
+        prefEditor.commit();*/
+        intent = new Intent(this, EventList.class);
         startActivity(intent);
         SetLocation.this.finish();
     }
@@ -243,7 +244,7 @@ public class SetLocation extends AppCompatActivity
     //Start the next Activity by method overloading
     public void gotoNavigationPane() {
 
-        intent = new Intent(this, NavigationMenu.class);
+        intent = new Intent(this, EventList.class);
         startActivity(intent);
         SetLocation.this.finish();
     }
