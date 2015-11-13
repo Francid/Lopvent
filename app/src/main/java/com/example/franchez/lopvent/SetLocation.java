@@ -68,7 +68,8 @@ public class SetLocation extends AppCompatActivity
 
         } else {
 
-            gotoNavigationPane();                   //Call the Navigation method to start next activity
+           // gotoNavigationPane();
+            gotoHomeActivity();//@ avneet replaced Event List with  Home Activity
         }
 
     }
@@ -232,21 +233,40 @@ public class SetLocation extends AppCompatActivity
 
     //Please comment what is happening here
     public void gotoNavigationPane(View view) {
-        /*SharedPreferences myPreference = getSharedPreferences("CustomSharedPreferencesLocation", 0);
-        SharedPreferences.Editor prefEditor = myPreference.edit();
-        prefEditor.putString("KeyLocation", edTxtLocation.getText().toString());
-        prefEditor.commit();*/
+
+      /*
         intent = new Intent(this, EventList.class);
         startActivity(intent);
         SetLocation.this.finish();
+        */
     }
 
     //Start the next Activity by method overloading
-    public void gotoNavigationPane() {
-
+    //@avneet : go to navigation page
+    public void gotoNavigatsionPane() {
+        Intent intent = new Intent(this, navigation.class);
+        startActivity(intent);
+        /*
         intent = new Intent(this, EventList.class);
         startActivity(intent);
         SetLocation.this.finish();
+    }*/
     }
+
+    //@ Avneet
+    //open ups the Home Page
+    public void gotoHomeActivity() {
+        intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+        SetLocation.this.finish();
+    }
+    //@ Avneet
+    //open ups the Home Page
+    public void gotoHomeActivity(View view) {
+        intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+        SetLocation.this.finish();
+    }
+
 
 }

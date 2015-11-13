@@ -41,8 +41,8 @@
         </activity>
         <activity android:name=".All_View">
         </activity>
-        <activity android:name=".HomeActivityMenu"></activity>
-        <activity android:name=".NavigationPane"></activity>
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".navigation"></activity>
     </application>
 
 </manifest>

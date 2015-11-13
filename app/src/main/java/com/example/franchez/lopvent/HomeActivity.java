@@ -23,4 +23,11 @@ import java.util.TreeMap;
 
 
 
-}
+
+
+
+     public void gotoNavigationPage(View view) {
+         Intent intent=new Intent(this,navigation.class);
+         startActivity(intent);
+     }
+ }
